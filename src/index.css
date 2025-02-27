@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Montserrat:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --deep-purple: #1b0330;
+  --bright-purple: #9013FE;
+  --electric-blue: #4285F4;
+  --dark-charcoal: #1E1E1E;
+  --light-gray: #CCCCCC;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to bottom, var(--deep-purple), #000000);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, white, var(--electric-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.blue-gradient-text {
+  background: linear-gradient(to right, var(--electric-blue), #a5c8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.purple-gradient-text {
+  background: linear-gradient(to right, var(--bright-purple), var(--electric-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-background {
+  background-image: 
+    linear-gradient(rgba(144, 19, 254, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(144, 19, 254, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.blurry-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.service-card {
+  background: var(--dark-charcoal);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(144, 19, 254, 0.3);
+}
+
+.service-number {
+  background: var(--bright-purple);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.social-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  color: var(--electric-blue);
+}
+
+/* Animated background elements */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
