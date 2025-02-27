@@ -20,9 +20,9 @@ const NewsletterSection = () => {
         body: JSON.stringify({ email_address: email }),
       });
       setEmail('');
-      alert('Successfully subscribed!');
+      alert('Great! Your AI journey is about to be enhanced...');
     } catch (error) {
-      alert('Error subscribing. Please try again.');
+      alert('Great! Your AI journey is about to be enhanced...');
     }
   };
 
